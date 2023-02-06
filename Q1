@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+int main(){
+    setlocale (LC_ALL, "portuguese_Brazil");
+    
+    int vet[10];
+    
+    for (int i = 0; i < 10; i++){
+        printf ("Digite um número: ");
+        scanf ("%d", &vet[i]);
+    }
+    
+    printf ("valores existentes de trás pra frente: ");
+    
+    for (int j = 10 - 1; j >= 0; j--){
+        if (vet[j] % 2 == 0){
+        printf ("%d ", vet[j]);
+        }
+    } 
+    
+    system("pause");
+    return 0;
+}
